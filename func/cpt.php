@@ -11,7 +11,7 @@ function go_post_types_uslugi() {
 	);
 
 	$args = array( 
-	    'public' => false,
+	    'public' => true,
 		'has_archive' => false,
 		'show_in_rest' => true,
 		'hierarchical'      => false,
@@ -19,10 +19,10 @@ function go_post_types_uslugi() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => false,
-		'publicly_queryable' => false,
+		'publicly_queryable' => true,
 		'show_in_rest' => true,
 		"rewrite"             => array( "slug" => "uslugi", "with_front" => true ),
-		'supports'      => array( 'title', ),
+		'supports'      => array( 'title', 'thumbnail', 'editor' ),
 		// , 'editor' 
 	);
     register_post_type( 'uslugi', $args );

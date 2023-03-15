@@ -1,14 +1,21 @@
 #footer {
   margin-top: 50px;
-  background-color: $light;
+  background-color: $black;
   padding-bottom: 20px;
   padding-top: 50px;
+  * {
+    color: hsla(0, 0%, 100%, 0.67);
+  }
+  .sub-menu {
+    display: none !important;
+  }
 }
 .f-main {
   margin-bottom: 50px;
   .f-main__wraper {
     padding: 0 15px;
     display: flex;
+    justify-content: space-between;
     gap: 20px;
     @media #{$md} {
       flex-wrap: wrap;
@@ -19,89 +26,14 @@
     }
     .col {
       &:nth-child(1) {
-        width: 25%;
-        @media #{$md} {
-          width: calc(40% - 20px);
-        }
         @media #{$sm} {
           width: 100% !important;
         }
       }
-      &:nth-child(2) {
-        width: 20%;
-        @media #{$md} {
-          width: calc(30% - 20px);
-        }
-        @media #{$sm} {
-          width: 100% !important;
-        }
-      }
-      &:nth-child(3) {
-        width: 20%;
-        @media #{$md} {
-          width: calc(30% - 20px);
-        }
-        @media #{$sm} {
-          width: 100% !important;
-        }
-      }
-      &:nth-child(4) {
-        width: 20%;
-        @media #{$md} {
-          width: calc(40% - 20px);
-        }
-        @media #{$sm} {
-          width: 100% !important;
-        }
-      }
-      &:nth-child(5) {
-        width: 15%;
-        @media #{$sm} {
-          width: 100% !important;
-        }
-      }
-    }
-  }
-  .calaps {
-    margin-top: -1px;
-    @media #{$sm} {
-      border-bottom: 1px solid $light-black;
-      padding: 0px 10px;
-    }
-    .calaps__opener {
       @media #{$sm} {
-        position: relative;
-
-        &::after {
-          content: "";
-          background-image: url(../img/icons/arrow.svg);
-          width: 18px;
-          height: 9px;
-          display: block;
-          position: absolute;
-          color: $light-black;
-          top: 50%;
-          right: 10px;
-          transform: translate(0, -50%);
-        }
+        width: 50%;
+        margin-bottom: 20px;
       }
-    }
-    .calaps__list {
-      @media #{$sm} {
-        display: none;
-        margin-top: 20px;
-        padding-bottom: 10px;
-      }
-    }
-  }
-  .calaps.active {
-    .calaps__opener {
-      &::after {
-        transform: translate(0, -50%) rotate(180deg);
-      }
-    }
-    .calaps__list {
-      display: block !important;
     }
   }
   .logo {
@@ -111,38 +43,20 @@
       margin-bottom: 50px;
     }
   }
-  address {
-    font-style: initial;
-    margin-top: 20px;
-    p {
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-      font-weight: 300;
-    }
-    .link {
-      font-size: 14px;
-      display: block;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      text-decoration: none;
-      color: $light-black;
-      margin-bottom: 10px;
-      &:hover {
-        color: $main;
-      }
-    }
-    a.link {
-      &:hover {
-        color: $main;
-      }
+  p.widgettitle {
+    margin-bottom: 20px;
+    color: #fff !important;
+    font-size: 17px;
+    font-weight: 700;
+    span {
+      opacity: 0 !important;
     }
   }
-
   p {
-    font-weight: 700;
-    font-size: 18px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 23px;
+    font-weight: 400;
   }
   ul {
     padding: 0px;
@@ -151,70 +65,19 @@
     li {
       margin-bottom: 10px;
       a {
-        text-decoration: none;
-        color: $light-black;
+        display: block;
+        margin-right: 20px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        -webkit-transition: all 200ms ease;
+        transition: all 200ms ease;
         font-size: 14px;
-        &:hover {
-          color: $main !important;
-        }
-      }
-    }
-  }
+        line-height: 16px;
+        font-weight: 400;
+        text-decoration: none;
 
-  .social-media {
-    margin-top: 30px;
-    @media #{$sm} {
-      text-align: center;
-    }
-    > span {
-      margin-bottom: 15px;
-      display: block;
-      font-size: 10px;
-      color: $light-black;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      margin-bottom: 15px;
-      display: flex;
-      gap: 15px;
-      @media #{$sm} {
-        justify-content: center;
-      }
-      li {
-        a {
-        }
-      }
-    }
-  }
-  .delivery,
-  .pay {
-    @media #{$sm} {
-      text-align: center;
-    }
-    > span {
-      margin-bottom: 15px;
-      display: block;
-      font-size: 10px;
-      color: $light-black;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      // margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      @media #{$sm} {
-        justify-content: center;
-      }
-      li {
-        img {
-          width: 100%;
-          max-width: 53px;
-          height: auto;
+        &:hover {
+          color: #fff !important;
         }
       }
     }
@@ -229,21 +92,13 @@
   }
   .f__info__wraper {
     display: flex;
-    justify-content: space-between;
-    @media #{$sm} {
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    justify-content: center;
     p {
-      font-size: 12px;
-      margin: 0;
-      padding: 0;
-      @media #{$sm} {
-        display: block;
-        width: 100%;
-      }
+      margin-bottom: 0px;
+      color: #ffffffa1;
+      font-size: 11px;
+      line-height: 20px;
+      font-weight: 300;
     }
   }
 }

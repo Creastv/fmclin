@@ -1,0 +1,59 @@
+.single-uslugi{}
+.single-uslugi__header{
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    position: relative;
+    background-color: #edf7fc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(237, 247, 252, 0.88)), to(rgba(237, 247, 252, 0.88))),
+    url("https://uploads-ssl.webflow.com/63c15cb2eb6e2bca8b28a669/63c15cb2eb6e2bed8928a6cb_hero-image.png");
+    background-image: linear-gradient(180deg, rgba(237, 247, 252, 0.88), rgba(237, 247, 252, 0.88)),
+    url("https://uploads-ssl.webflow.com/63c15cb2eb6e2bca8b28a669/63c15cb2eb6e2bed8928a6cb_hero-image.png");
+    background-position: 0px 0px, 67% 13%;
+    background-size: auto, cover;
+
+    opacity: 1;
+    background-clip: border-box;
+    -webkit-text-fill-color: inherit;
+    padding-top: 80px;
+    margin-bottom: 50px;
+    min-height: 300px;
+    .row{
+        display: flex;
+        .col{
+            &:nth-child(1){
+                width: 35%;
+                margin-right: 5%;
+            }
+            &:nth-child(2){
+                width: 65%;
+            }
+        }
+    }
+    h1{
+        margin-bottom: 80px;
+    }
+}
+
+.single-uslugi__wraper{
+    display: flex;
+}
+.single-uslugi__sidebar{
+    width: 35%;
+    margin-right: 5%;
+    margin-top: -280px;
+    position: relative;
+    z-index: 2;
+    .single-uslugi__sidebar__wraper{
+        background-color: #fff;
+        height: 100%;
+        padding: 15px 25px 25px;
+    }
+}
+.single-uslugi__container{
+    width: 65%;
+    .single-uslugi__header{
+        margin-top: 450px;
+        margin-bottom: 100px;
+    }
+}

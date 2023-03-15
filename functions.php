@@ -11,7 +11,56 @@ if ( ! function_exists( 'go_register_nav_menu' ) ) {
     }
     add_action( 'after_setup_theme', 'go_register_nav_menu', 0 );
 }
-
+/* Add Multiple sidebar 
+*/
+if ( function_exists('register_sidebar') ) {
+	$sidebar1 = array(
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widgettitle">',
+		'after_title' => '</p>',        
+		'name'=>__( 'Footer 1', 'go' ),	
+    'id'=> 'footer_1',
+	);	
+	$sidebar2 = array(
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widgettitle">',
+		'after_title' => '</p>',        
+		'name'=>__( 'Footer 2', 'go' ),	
+    'id'=> 'footer_2',
+	);
+    $sidebar3 = array(
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widgettitle">',
+		'after_title' => '</p>',        
+		'name'=>__( 'Footer 3', 'go' ),	
+    'id'=> 'footer_3',
+	);
+  $sidebar4 = array(
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widgettitle">',
+		'after_title' => '</p>',        
+		'name'=>__( 'Footer 4', 'go' ),	
+    'id'=> 'footer_4',
+	);
+  $sidebar5 = array(
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widgettitle">',
+		'after_title' => '</p>',        
+		'name'=>__( 'Footer 5', 'go' ),	
+    'id'=> 'footer_5',
+	);
+	
+	register_sidebar($sidebar1);
+	register_sidebar($sidebar2);
+  register_sidebar($sidebar3);
+  register_sidebar($sidebar4);
+  register_sidebar($sidebar5);
+}
 require_once get_template_directory() . '/func/enqueue-styles.php';
 require_once get_template_directory() . '/func/enqueue-scripts.php';
 require get_template_directory() . '/func/clean-up.php';
@@ -99,3 +148,12 @@ add_filter('acf_icon_path_suffix',
     return '/src/img/icons/'; // After assets folder you can define folder structure
   }
 );
+
+
+// function add_file_types_to_uploads($file_types){
+// $new_filetypes = array();
+// $new_filetypes['svg'] = 'image/svg+xml';
+// $file_types = array_merge($file_types, $new_filetypes );
+// return $file_types;
+// }
+// add_filter('upload_mimes', 'add_file_types_to_uploads');
