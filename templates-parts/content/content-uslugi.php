@@ -25,7 +25,7 @@ $postID = get_the_ID();
         <div class="single-uslugi__sidebar">
             <div class="single-uslugi__sidebar__wraper">
                 <?php if( $posts ): ?>
-                <h4><?php echo $postID; ?>Usługi</h4>
+                <h4>Usługi</h4>
                 <ul>
                     <?php foreach( $posts as $post ) :
                 setup_postdata($post);?>
@@ -33,7 +33,7 @@ $postID = get_the_ID();
                         <a href="<?php the_permalink(); ?>">
                             <img src="<?php echo get_the_post_thumbnail_url(); ?>" width="35px" height="35px" alt="<?php the_title(); ?>">
                             <span>
-                                <?php echo  $post->ID; ?> <?php the_title(); ?>
+                                <?php the_title(); ?>
                             </span>
                         </a>
                     </li>
