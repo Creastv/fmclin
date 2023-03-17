@@ -1,0 +1,58 @@
+.inf .info__wraper ul {
+  padding: 0px;
+}
+.inf .info__wraper ul li {
+  display: flex;
+  align-items: center;
+}
+.inf .info__wraper ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+  color: #03254c;
+  font-weight: 600;
+}
+.inf .info__wraper ul li a span {
+  font-size: 18px;
+}
+.inf .info__wraper ul li .img {
+  margin-right: 10px;
+  width: 50px;
+  text-align: center;
+}
+.inf .info__wraper ul li .img img {
+  margin: 0px;
+}
+.inf .info__wraper ul li span {
+  font-size: 14px;
+  line-height: 22px;
+  color: #03254c;
+  font-weight: 600;
+  width: calc(100% - 60px);
+}
+.inf .info__wraper ul li span:after {
+  display: none !important;
+}
+
+.inf--Style1 .info__wraper {
+  background-color: #f6fafd;
+  margin-bottom: 30px;
+  padding: 15px 25px 25px;
+}
+
+.inf--Style2 .info__wraper {
+  margin: 30px 0;
+}
+.inf--Style2 .info__wraper li {
+  margin-bottom: 20px;
+}
+.inf--Style2 .info__wraper a {
+  text-decoration: none;
+  font-size: 27px !important;
+}
+.inf--Style2 .info__wraper a span {
+  font-size: 27px !important;
+  font-weight: 700;
+}/*# sourceMappingURL=inf.css.map */

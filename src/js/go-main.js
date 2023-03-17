@@ -16,21 +16,9 @@
       document.querySelector("body").classList.remove("active");
       navFlag = false;
     }
-    loadItemsNav();
   });
 
-  function loadItemsNav() {
-    const li = [...document.querySelectorAll(".js-header-nav-list li")];
-    let index = 0;
-    setTimeout(function () {
-      window.setInterval(function () {
-        if (index < li.length) {
-          li[index++].classList.toggle("liVisible");
-        }
-      }, 150);
-    }, 0);
-  }
-
+ 
   // Close after click the navmenu on mobile
   const itemsNAv = document.querySelectorAll(".js-navbar__navigation a");
   for (let i = 0; i < itemsNAv.length; i++) {

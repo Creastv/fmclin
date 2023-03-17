@@ -1,0 +1,54 @@
+@import "../../src/css/scss/variable";
+
+.uslugi-list {
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    @media #{$md} {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+    @media #{$xs} {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+    li {
+      //   width: 33.333%;
+      //   padding: 10px;
+      margin-bottom: 0px;
+      .item-wraper {
+        height: 100%;
+        background-color: #edf7fc;
+        padding: 20px;
+        a {
+          text-decoration: none;
+          color: $black;
+        }
+        h2 {
+          margin-bottom: 20px;
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 20px;
+        }
+        .c {
+          font-size: 14px;
+          display: inline-flex;
+          border-bottom: 2px solid rgba(17, 103, 177, 0.22);
+          &:hover {
+            border-bottom: 2px solid $main;
+          }
+        }
+      }
+    }
+  }
+}

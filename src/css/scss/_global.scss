@@ -28,7 +28,7 @@ body.active {
 }
 
 .container {
-  max-width: 1230px;
+  max-width: 1330px;
   width: 100%;
   margin: 0 auto;
   @media #{$md} {
@@ -37,8 +37,12 @@ body.active {
 }
 
 .row {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  @media #{$sm} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 #error {
   h2 {
@@ -112,4 +116,18 @@ body.active {
   flex-wrap: wrap;
   width: 100%;
   gap: 10px;
+}
+
+.home,
+.page-id-9 {
+  #main {
+    margin-bottom: 0px;
+  }
+  #footer {
+    margin-top: 0px;
+  }
+}
+
+.no-margin {
+  margin-bottom: 0px !important;
 }

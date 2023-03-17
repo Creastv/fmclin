@@ -1,6 +1,6 @@
 <?php
 add_theme_support('post-thumbnails');
-add_image_size( 'licytacja', 220, 220, array( 'center', 'center' ) );
+add_image_size( 'icon', 35, 35, array( 'center', 'center' ) );
 add_image_size( 'post-item', 450, 300, array( 'center', 'center' ) );
 
 if ( ! function_exists( 'go_register_nav_menu' ) ) {
@@ -54,12 +54,21 @@ if ( function_exists('register_sidebar') ) {
 		'name'=>__( 'Footer 5', 'go' ),	
     'id'=> 'footer_5',
 	);
+   $sidebar6 = array(
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widgettitle">',
+		'after_title' => '</p>',        
+		'name'=>__( 'Sidebar usługi', 'go' ),	
+    'id'=> 'sidebar_uslugi',
+	);
 	
 	register_sidebar($sidebar1);
 	register_sidebar($sidebar2);
   register_sidebar($sidebar3);
   register_sidebar($sidebar4);
   register_sidebar($sidebar5);
+  register_sidebar($sidebar6);
 }
 require_once get_template_directory() . '/func/enqueue-styles.php';
 require_once get_template_directory() . '/func/enqueue-scripts.php';
@@ -132,6 +141,10 @@ function ka_override_MCE_options($init)
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+function new_excerpt_length( $length ) {
+    return 10;
+}
+add_filter( 'excerpt_length', 'new_excerpt_length', 999 );
 
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page(array(

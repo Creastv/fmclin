@@ -1,6 +1,6 @@
 #header {
   background-color: #edf7fc;
-  border-bottom: 1px solid $gray;
+  border-bottom: 1px solid rgba(3, 37, 76, 0.13);
   z-index: 99;
   width: 100%;
   top: 0px;
@@ -55,7 +55,12 @@
     margin-right: 10px;
     padding-right: 20px;
     border-right: 1px solid rgba(3, 37, 76, 0.13);
+    @media #{$sm} {
+      max-width: 210px;
+      height: auto;
+    }
   }
+
   @media #{$xs} {
     flex: auto;
   }
@@ -66,6 +71,15 @@
     flex: auto;
   }
   @media #{$xs} {
+    display: none;
+  }
+  @media #{$sm} {
+    a {
+      font-size: 10px;
+      padding: 4px;
+    }
+  }
+  @media #{$xs} {
     // display: none;
     order: 3;
     justify-self: center;
@@ -74,35 +88,26 @@
   }
 }
 
-// swicher + panel pacienta
-.navbar__lang-pp {
-  display: flex;
-  align-items: center;
-  .btn-panel {
-    span {
-      @media #{$xs} {
-        font-size: 10px;
-      }
-      @media #{$x} {
-        display: none;
-      }
-    }
-  }
-  ul {
-    margin-right: 30px;
-    li {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-  }
-}
 // Menu
 .navbar__navigation {
   flex: auto;
   @media #{$md} {
     flex: none;
-    // order: 3;
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    display: block !important;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    padding-top: 150px;
+    background: #2c2c2c;
+    text-align: right;
+  }
+  @media #{$md} {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: scroll;
   }
   > ul {
     position: relative;
@@ -112,29 +117,18 @@
     display: flex;
     align-items: center;
     @media #{$md} {
-      position: fixed;
-      top: 0px;
-      right: -100%;
-      display: block !important;
-      width: 100%;
-      max-width: 300px;
-      height: 100vh;
-      padding-top: 150px;
-      background: #2c2c2c;
-      text-align: right;
+      display: block;
     }
     li {
       margin: 0;
       padding: 0;
-      @media #{$md} {
-        transform: translate(100%, 0);
-      }
       a {
         font-size: 16px;
         font-weight: 600;
         padding: 10px 12px;
         color: #03254c;
         text-decoration: none;
+        display: block;
         @media #{$xxlg} {
           padding: 15px 10px;
         }
@@ -142,9 +136,9 @@
           font-size: 15px;
         }
         @media #{$md} {
-          display: block;
-          padding: 20px;
-          padding: 10px 0 !important;
+          display: inline-block;
+          padding: 10px 5px;
+          padding-right: 5px !important;
           font-size: 21px;
           color: #fff;
         }
@@ -159,31 +153,6 @@
         padding: initial;
       }
     }
-    .liVisible {
-      @media #{$lg} {
-        transform: translate(0, 0) !important;
-      }
-    }
-    .current_page_item,
-    .current-page-ancestor {
-      position: relative;
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        background-image: url(../img/corner-mark.png);
-        width: 13px;
-        height: 13px;
-        top: -5px;
-        left: 5px;
-        @media #{$lg} {
-          display: none;
-        }
-      }
-      > a {
-        font-weight: 700;
-      }
-    }
   }
 }
 
@@ -196,13 +165,31 @@
   border-radius: 3px;
   background-color: #fff;
   min-width: 200px;
+  @media #{$md} {
+    display: block !important;
+    position: relative;
+    background: none;
+    padding: 10px 0;
+  }
   li {
     a {
-      padding: 8px;
-      display: block;
+      font-size: 14px !important;
+      padding: 3px 12px !important;
+      @media #{$md} {
+        padding: 0px 5px !important;
+      }
+      @media #{$xs} {
+        padding: 0px 5px !important;
+      }
       &:hover {
         background-color: #edf7fc;
       }
+    }
+  }
+  .current-menu-item {
+    a {
+      background-color: #edf7fc;
+      color: $main;
     }
   }
 }
@@ -220,7 +207,10 @@
     display: block;
     position: absolute;
     right: 10px;
-    top: 4px;
+    top: 15px;
+    @media #{$md} {
+      display: none;
+    }
   }
   &:hover {
     .sub-menu {
@@ -228,13 +218,19 @@
     }
   }
 }
+
 .navbar__navigation.active {
+  transition: all 0.1s linear;
+  // right: -8% !important;
+  right: 0px !important;
+  padding-right: 30px;
+  border: none;
   > ul {
-    transition: all 0.1s linear;
-    // right: -8% !important;
-    right: 0px !important;
-    padding-right: 30px;
-    border: none;
+    // transition: all 0.1s linear;
+    // // right: -8% !important;
+    // right: 0px !important;
+    // padding-right: 30px;
+    // border: none;
 
     li {
       transition: all 0.4s linear;
@@ -251,6 +247,7 @@
   align-items: center;
   gap: 10px;
   transform: translateY(-2px);
+  padding-right: 15px;
   @media #{$md} {
     display: flex;
     order: 4;

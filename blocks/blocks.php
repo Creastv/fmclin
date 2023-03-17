@@ -19,6 +19,7 @@ function register_acf_block_types() {
           wp_enqueue_script('go-accordions', get_template_directory_uri().'/blocks/accordions/accordions.js', array( 'jquery' ),'4', true );
       },
     ));
+
     acf_register_block_type(array(
       'name'              => 'btn',
       'title'             => __('Btn'),
@@ -43,10 +44,96 @@ function register_acf_block_types() {
         'foreground' => '#fff',
         'src' => 'ellipsis',
       ),
+      'supports'		=> [
+          'customClassName'	=> true,
+        ],
       'mode'            => 'preview', 
       'keywords'          => array( 'tytul' ),
       'enqueue_assets'    => function(){
           wp_enqueue_style( 'go-tytul',  get_template_directory_uri() . '/blocks/tytul/tytul.min.css' );
+      },
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'uslugi',
+      'title'             => __('Usługi'),
+      'render_template'   => 'blocks/uslugi/uslugi.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'uslugi' ),
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-uslugi',  get_template_directory_uri() . '/blocks/uslugi/uslugi.min.css' );
+      },
+      
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'container',
+      'title'             => __('Container'),
+      'render_template'   => 'blocks/container/container.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'container' ),
+      'supports'		=> [
+          'align'			=> false,
+          'anchor'		=> false,
+          'customClassName'	=> true,
+          'jsx' 			=> true,
+        ],
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-container',  get_template_directory_uri() . '/blocks/container/container.min.css' );
+      },
+      
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'zespol',
+      'title'             => __('Zespół'),
+      'render_template'   => 'blocks/zespol/zespol.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'zespol' ),
+      'supports'		=> [
+          'align'			=> false,
+          'anchor'		=> false,
+          'customClassName'	=> true,
+          'jsx' 			=> true,
+        ],
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-zespol',  get_template_directory_uri() . '/blocks/zespol/zespol.min.css' );
+      },
+      
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'inf',
+      'title'             => __('Info sidebar'),
+      'render_template'   => 'blocks/inf/inf.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'inf' ),
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-inf',  get_template_directory_uri() . '/blocks/inf/inf.min.css' );
       },
     ));
 }

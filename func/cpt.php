@@ -22,7 +22,7 @@ function go_post_types_uslugi() {
 		'publicly_queryable' => true,
 		'show_in_rest' => true,
 		"rewrite"             => array( "slug" => "uslugi", "with_front" => true ),
-		'supports'      => array( 'title', 'thumbnail', 'editor' ),
+		'supports'      => array( 'title', 'thumbnail', 'editor', 'excerpt' ),
 		// , 'editor' 
 	);
     register_post_type( 'uslugi', $args );

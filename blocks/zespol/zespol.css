@@ -1,0 +1,14 @@
+.zespol .zespol__wraper .osoba {
+  margin-bottom: 10px;
+}
+.zespol .zespol__wraper .osoba p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #03254c;
+  font-weight: 600;
+}
+.zespol .zespol__wraper .osoba span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #747474;
+}/*# sourceMappingURL=zespol.css.map */
