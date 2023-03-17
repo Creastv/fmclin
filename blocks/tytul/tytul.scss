@@ -8,11 +8,19 @@
     font-size: 40px;
     line-height: 45px;
     text-decoration: none;
+    @media #{$sm} {
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
   h1.b-title__h {
     font-family: Montserrat, sans-serif;
     font-size: 51px;
     line-height: 57px;
+    @media #{$sm} {
+      font-size: 31px;
+      line-height: 37px;
+    }
   }
   .b-title__dop {
     color: $main2;

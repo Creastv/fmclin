@@ -1161,6 +1161,7 @@ body.active {
 @media only screen and (max-width: 768px) {
   .single-uslugi__header {
     margin-bottom: 30px;
+    min-height: initial;
   }
 }
 .single-uslugi__header .row {
@@ -1190,7 +1191,17 @@ body.active {
   }
 }
 .single-uslugi__header h1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 51px;
+  line-height: 57px;
   margin-bottom: 80px;
+}
+@media only screen and (max-width: 768px) {
+  .single-uslugi__header h1 {
+    font-size: 31px;
+    line-height: 37px;
+    margin-bottom: 30px;
+  }
 }
 
 .single-uslugi__wraper {

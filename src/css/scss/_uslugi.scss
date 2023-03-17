@@ -20,6 +20,7 @@
   min-height: 300px;
   @media #{$sm} {
     margin-bottom: 30px;
+    min-height: initial;
   }
   .row {
     display: flex;
@@ -44,7 +45,15 @@
     }
   }
   h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 51px;
+    line-height: 57px;
     margin-bottom: 80px;
+    @media #{$sm} {
+      font-size: 31px;
+      line-height: 37px;
+      margin-bottom: 30px;
+    }
   }
 }
 
