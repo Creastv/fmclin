@@ -271,6 +271,10 @@ body.active {
   margin-bottom: 0px !important;
 }
 
+.error404 #main {
+  padding-top: 50px;
+}
+
 #footer {
   margin-top: 50px;
   background-color: #03254c;
