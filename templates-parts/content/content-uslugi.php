@@ -33,7 +33,9 @@ $postID = get_the_ID();
                 setup_postdata($post);?>
                     <li class="<?php echo $postID === $post->ID ? 'active' : null; ?>">
                         <a href="<?php the_permalink(); ?>">
+                        <?php if ( has_post_thumbnail() )  : ?>
                             <img src="<?php echo get_the_post_thumbnail_url(); ?>" width="35px" height="35px" alt="<?php the_title(); ?>">
+                        <?php endif; ?>
                             <span>
                                 <?php the_title(); ?>
                             </span>
