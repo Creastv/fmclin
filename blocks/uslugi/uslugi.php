@@ -11,7 +11,9 @@ $uslugi = get_posts( array( 'post_type' => 'uslugi', 'posts_per_page' => -1, 'or
             <li>
                 <div class="item-wraper">
                     <a href="<?php the_permalink($usluga->ID); ?>">
+                        <?php if ( has_post_thumbnail() )  : ?>
                         <img src="<?php echo get_the_post_thumbnail_url($usluga->ID); ?>" width="75px" height="75px" alt="<?php the_title(); ?>">
+                        <?php endif; ?>
                         <h2> <?php echo get_the_title($usluga->ID); ?> </h2>
                     </a>
                     <p><?php echo get_the_excerpt($usluga->ID); ?></p>

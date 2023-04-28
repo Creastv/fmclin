@@ -11,7 +11,9 @@ $postID = get_the_ID();
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
+                    <?php if ( has_post_thumbnail() )  : ?>
                     <img src="<?php echo get_the_post_thumbnail_url(); ?>" width="75px" height="75px" alt="<?php the_title(); ?>">
+                    <?php endif; ?>
                     <h1><?php the_title(); ?></h1>
                 </div>
             </div>
