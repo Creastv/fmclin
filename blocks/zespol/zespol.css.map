@@ -1,1 +1,1 @@
-{"version":3,"sources":["zespol.scss","zespol.css","../../src/css/scss/_variable.scss"],"names":[],"mappings":"AAII;EACE,mBAAA;ACHN;ADIM;EACE,gBAAA;EACA,mBAAA;EACA,cEKA;EFJA,gBAAA;ACFR;ADIM;EACE,eAAA;EACA,iBAAA;EACA,cAAA;ACFR","file":"zespol.css"}
+{"version":3,"sources":["zespol.scss","zespol.css","../../src/css/scss/_variable.scss"],"names":[],"mappings":"AAII;EACE,mBAAA;ACHN;ADIM;EACE,eAAA;EACA,gBAAA;EACA,mBAAA;EACA,cEIA;EFHA,gBAAA;ACFR;ADIM;EACE,eAAA;EACA,mBAAA;ACFR;ADIM;EACE,qBAAA;ACFR;ADIM;EACE,mBAAA;ACFR;ADIM;EACE,eAAA;EACA,iBAAA;EACA,cAAA;ACFR","file":"zespol.css"}
