@@ -2,11 +2,13 @@
 $title = get_field( 'tytul' );
 $dop = get_field( 'dopisek' );
 $tag = get_field( 'tag' );
+
+$class_name = 'b-title';
 if ( ! empty( $block['align'] ) ) {
     $class_name .= ' text-' . $block['align'];
 }
 
-$class_name = 'b-title';
+
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }

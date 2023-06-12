@@ -1,104 +1,132 @@
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-.form-group {
-  position: relative;
-  display: flex;
-  align-items: center;
-  .form-control {
-    width: 100%;
-    min-height: 55px;
-    height: 100%;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 6px;
-    border: 0;
-    border-bottom: 2px solid $main !important;
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: #fff;
+  min-height: 50px;
+  padding: 20px 10px;
+  border-radius: 6px;
+  border: 1px solid $light;
+  border-bottom: 1px solid $main2;
+  font-size: 12px;
+  outline: 0 !important;
+  color: #757575;
+  &:focus {
+    border: 1px solid #e2e2e2;
   }
-  ::placeholder {
-    // color: #fff !important;
-  }
-  .wpcf7-form-control-wrap {
-    width: 100%;
-    padding-right: 15px;
-    padding-bottom: 15px;
-  }
-}
-.form-row {
-  display: flex;
-  flex-wrap: wrap;
 }
 .col-1 {
-  width: 100%;
-}
-.col-2 {
-  width: 50%;
-  @media #{$sm} {
-    width: 100%;
+  margin-bottom: 15px;
+  label {
+    margin-bottom: 10px;
+    display: block;
+    .val {
+      color: red;
+    }
   }
 }
-.col-3 {
-  width: 33.333%;
+.form-group {
+  display: flex !important;
+  gap: 20px;
+  margin-bottom: 15px;
   @media #{$sm} {
-    width: 100%;
-  }
-}
-
-.form-group.checkbox {
-  width: 70%;
-  @media #{$sm} {
-    width: 100%;
+    gap: 0px;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
   }
   label {
-    align-items: center;
-    display: flex;
-    gap: 10px;
-  }
-  input {
-    width: 20px;
-  }
-  span {
-    font-size: 12px;
-  }
-}
-.btn-form {
-  width: 30%;
-  @media #{$sm} {
-    width: 100%;
-  }
-}
-.wpcf7-submit {
-  margin: 15px 25px;
-  background: $main;
-  border: 1px solid $main;
-  border-radius: 100px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 10px 20px;
-  width: 100%;
-  @media #{$sm} {
-    width: 100%;
+    margin-bottom: 10px;
     display: block;
+    .val {
+      color: red;
+    }
   }
-  &:hover {
-    background-color: $main;
-    color: #fff;
+  .col-2 {
+    width: 50%;
+    @media #{$sm} {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
 }
-
-.wpcf7-spinner {
-  position: absolute;
-  top: 30%;
-  right: 0px;
+::placeholder {
+  font-size: 12px;
+  font-weight: 300;
+  color: #757575;
 }
 
 .wpcf7-not-valid-tip {
-  //   position: absolute;
-  //   -webkit-transform: translateY(18px);
-  //   transform: translateY(18px);
-  font-size: 12px !important;
-  color: red !important;
+  font-size: 1;
+}
+
+.ch {
+  margin-bottom: 15px;
+  label {
+    display: flex;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+    text-align: justify;
+    a {
+      color: #5a86ae;
+    }
+  }
+  input {
+    width: 15px;
+    height: 15px;
+    min-height: 15px;
+    margin-right: 15px;
+  }
+}
+
+.btn-form-wraper {
+  text-align: center;
+  position: relative;
+  margin-bottom: 0px;
+  margin: 20px;
+  display: block;
+  .wpcf7-submit {
+    max-width: 300px;
+    display: inline-block;
+    background-color: $main;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 300ms ease;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    line-height: inherit;
+    &:hover {
+      background-color: #2f80c5;
+    }
+    &:active {
+      box-shadow: 0 0 0px 0 rgb(64, 64, 64, 0.43);
+      border: 1px solid #fff;
+    }
+  }
+  .wpcf7-spinner {
+    position: absolute;
+    right: 44px;
+  }
+}
+.wpcf7-not-valid-tip {
+  font-size: 10px;
+  position: absolute;
+}
+
+.form__wraper {
+  background-color: $light;
+  padding: 50px 50px 30px 50px;
+  // border-radius: 6px;
+  // margin-bottom: 50px;
+  // max-width: 900px;
+  // width: 100%;
+  margin: 0 auto;
+  @media #{$sm} {
+    padding: 20px 20px 20px 20px;
+  }
 }
