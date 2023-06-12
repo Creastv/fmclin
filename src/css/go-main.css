@@ -1136,19 +1136,10 @@ body.active {
     gap: 3px;
   }
 }
-.rank-math-breadcrumb a {
+.rank-math-breadcrumb a,
+.rank-math-breadcrumb span {
   text-decoration: none;
-  font-size: 16px;
-}
-@media only screen and (max-width: 460px) {
-  .rank-math-breadcrumb a {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .rank-math-breadcrumb a {
-    font-size: 12px;
-  }
+  font-size: 12px;
 }
 
 .go-pagination {
