@@ -18,3 +18,26 @@
     border: 1px solid #fff;
   }
 }
+
+.btn-rev {
+  background-color: transparent;
+  border: 1px solid $main;
+  color: $main;
+  padding: 14px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 300ms ease;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  line-height: inherit;
+  &:hover {
+    background-color: #2f80c5;
+    color: #fff;
+  }
+  &:active {
+    box-shadow: 0 0 0px 0 rgb(64, 64, 64, 0.43);
+    border: 1px solid #fff;
+  }
+}

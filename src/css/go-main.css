@@ -382,14 +382,24 @@ body.active {
   font-weight: 300;
 }
 
-#header {
+#header-top {
+  padding: 10px 0px;
+}
+#header-top .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header-bottom {
   background-color: #edf7fc;
+  border-top: 1px solid rgba(3, 37, 76, 0.13);
   border-bottom: 1px solid rgba(3, 37, 76, 0.13);
   z-index: 99;
   width: 100%;
   top: 0px;
 }
-#header .navbar {
+#header-bottom .navbar {
   transition: all 0.3s linear;
   position: relative;
   z-index: 99;
@@ -398,31 +408,31 @@ body.active {
   padding: 20px 0;
 }
 @media only screen and (max-width: 1300px) {
-  #header .navbar {
+  #header-bottom .navbar {
     gap: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
-  #header .navbar {
+  #header-bottom .navbar {
     gap: 10px;
   }
 }
 @media only screen and (max-width: 1300px) {
-  #header .navbar {
+  #header-bottom .navbar {
     flex-wrap: wrap;
   }
 }
 @media only screen and (max-width: 768px) {
-  #header .navbar {
+  #header-bottom .navbar {
     padding: 20px 0;
   }
 }
-#header .navbar .navbar__wraper {
+#header-bottom .navbar .navbar__wraper {
   display: flex;
   align-items: center;
 }
 @media only screen and (max-width: 1300px) {
-  #header .navbar .navbar__wraper {
+  #header-bottom .navbar .navbar__wraper {
     flex-wrap: wrap;
     width: 100%;
   }
@@ -431,6 +441,7 @@ body.active {
 .js-header.active {
   transition: all 0.3s linear;
   position: fixed;
+  z-index: 99;
   top: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9) !important;
@@ -461,29 +472,73 @@ body.active {
   }
 }
 
+.navbar__cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 @media only screen and (max-width: 998px) {
   .navbar__cta {
     flex: auto;
   }
 }
-@media only screen and (max-width: 460px) {
-  .navbar__cta {
-    display: none;
+@media only screen and (max-width: 768px) {
+  .navbar__cta a {
+    padding: 8px 10px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .navbar__cta a {
-    font-size: 10px;
-    padding: 4px;
+  .navbar__cta span {
+    display: none;
   }
 }
-@media only screen and (max-width: 460px) {
-  .navbar__cta {
-    order: 3;
-    justify-self: center;
-    width: 100%;
-    text-align: center;
+
+.navbar__inf .btn {
+  display: none;
+}
+@media only screen and (max-width: 998px) {
+  .navbar__inf .btn {
+    display: block;
   }
+}
+@media only screen and (max-width: 768px) {
+  .navbar__inf .btn {
+    padding: 8px 10px;
+  }
+}
+.navbar__inf ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  gap: 20px;
+}
+@media only screen and (max-width: 998px) {
+  .navbar__inf ul {
+    display: none;
+  }
+}
+.navbar__inf ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar__inf ul li span {
+  font-size: 14px;
+}
+.navbar__inf ul li .inf__cont span {
+  display: block;
+}
+.navbar__inf ul li .inf__cont span:nth-child(2) {
+  font-weight: 900;
+  color: #03254c;
+}
+.navbar__inf ul li .inf__cont a {
+  text-decoration: none;
+  color: #03254c;
+}
+.navbar__inf ul li .inf__cont a:hover {
+  color: #1167b1;
 }
 
 .navbar__navigation {
@@ -1327,6 +1382,29 @@ body.active {
   border: 1px solid #fff;
 }
 
+.btn-rev {
+  background-color: transparent;
+  border: 1px solid #1167b1;
+  color: #1167b1;
+  padding: 14px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 300ms ease;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  line-height: inherit;
+}
+.btn-rev:hover {
+  background-color: #2f80c5;
+  color: #fff;
+}
+.btn-rev:active {
+  box-shadow: 0 0 0px 0 rgba(64, 64, 64, 0.43);
+  border: 1px solid #fff;
+}
+
 *,
 ::after,
 ::before {
@@ -1460,6 +1538,29 @@ body.active {
   background-color: #2f80c5;
 }
 .btn:active {
+  box-shadow: 0 0 0px 0 rgba(64, 64, 64, 0.43);
+  border: 1px solid #fff;
+}
+
+.btn-rev {
+  background-color: transparent;
+  border: 1px solid #1167b1;
+  color: #1167b1;
+  padding: 14px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 300ms ease;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  line-height: inherit;
+}
+.btn-rev:hover {
+  background-color: #2f80c5;
+  color: #fff;
+}
+.btn-rev:active {
   box-shadow: 0 0 0px 0 rgba(64, 64, 64, 0.43);
   border: 1px solid #fff;
 }

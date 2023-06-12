@@ -20,9 +20,45 @@
             "endpoint": 0
         },
         {
+            "key": "field_64870524024fc",
+            "label": "inf",
+            "name": "inf",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64103b0812713",
             "label": "Link",
             "name": "link_",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6487050f024fb",
+            "label": "Link 2",
+            "name": "link_two",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -54,5 +90,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678785329
+    "modified": 1686570295
 }

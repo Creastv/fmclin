@@ -537,6 +537,29 @@ body.active {
   border: 1px solid #fff;
 }
 
+.btn-rev {
+  background-color: transparent;
+  border: 1px solid #1167b1;
+  color: #1167b1;
+  padding: 14px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 300ms ease;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  line-height: inherit;
+}
+.btn-rev:hover {
+  background-color: #2f80c5;
+  color: #fff;
+}
+.btn-rev:active {
+  box-shadow: 0 0 0px 0 rgba(64, 64, 64, 0.43);
+  border: 1px solid #fff;
+}
+
 .wp-block-spacer {
   background-color: #eeeef0 !important;
 }

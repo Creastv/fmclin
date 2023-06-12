@@ -1,7 +1,7 @@
 (window.load = function (event) {
   const togglerNav = document.querySelector(".js-navbar__toggler");
   const nav = document.querySelector(".js-navbar__navigation");
-  const heightHeader = document.querySelector("#header");
+
   let navFlag = false;
 
   togglerNav.addEventListener("click", () => {
@@ -18,7 +18,6 @@
     }
   });
 
- 
   // Close after click the navmenu on mobile
   const itemsNAv = document.querySelectorAll(".js-navbar__navigation a");
   for (let i = 0; i < itemsNAv.length; i++) {
@@ -43,17 +42,27 @@
   });
 
   // sticy nabvbar
-  const navbar = document.querySelector("#header");
+  const navbarBottom = document.querySelector("#header-bottom");
+  const navbarTop = document.querySelector("#header-top");
   document.addEventListener("scroll", () => {
-    var st = window.pageYOffset || document.documentElement.scrollTop;
-    if (window.pageYOffset) {
-      navbar.classList.add("active");
-      document.querySelector("body").style.paddingTop = heightHeader.clientHeight + "px";
-    } else {
-      navbar.classList.remove("active");
+    console.log(navbarBottom.offsetTop, window.pageYOffset);
+    if (navbarBottom.offsetTop <= window.pageYOffset) {
+      navbarBottom.classList.add("active");
+      document.querySelector("body").style.paddingTop = navbarTop.clientHeight + "px";
+    }
+    if (navbarTop.clientHeight >= window.pageYOffset) {
+      navbarBottom.classList.remove("active");
       document.querySelector("body").style.paddingTop = "0";
     }
+    // if (window.pageYOffset) {
+    //   navbar.classList.add("active");
+    //   document.querySelector("body").style.paddingTop = heightHeader.clientHeight + "px";
+    // } else {
+    //   navbar.classList.remove("active");
+    //   document.querySelector("body").style.paddingTop = "0";
+    // }
   });
+
   // footer
   const calaps = document.querySelectorAll(".calaps");
   console.log(calaps);

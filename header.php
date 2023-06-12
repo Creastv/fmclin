@@ -14,18 +14,28 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header id="header" class="js-header" itemscope itemtype="http://schema.org/WPHeader">
+<header id="header">
+    <div id="header-top">
+        <div class="container">
+            <div class="row">
+             <?php get_template_part('templates-parts/header/header', 'brand'); ?>
+             <?php get_template_part('templates-parts/header/header', 'inf'); ?>
+            </div>
+        </div>
+    </div>
+    <div id="header-bottom" class="js-header" itemscope itemtype="http://schema.org/WPHeader">
         <div class="container">
             <div class="row">
                 <div class="navbar">
-                    <?php get_template_part('templates-parts/header/header', 'brand'); ?>
+                    
                     <?php get_template_part('templates-parts/header/header', 'nav'); ?>
                     <?php get_template_part('templates-parts/header/header', 'burger'); ?>
                     <?php get_template_part('templates-parts/header/header', 'contact'); ?>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
     <main id="main">
         <div class="container">
             <div class="row">

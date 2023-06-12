@@ -1,5 +1,14 @@
-#header {
+#header-top {
+  padding: 10px 0px;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+#header-bottom {
   background-color: #edf7fc;
+  border-top: 1px solid rgba(3, 37, 76, 0.13);
   border-bottom: 1px solid rgba(3, 37, 76, 0.13);
   z-index: 99;
   width: 100%;
@@ -38,6 +47,7 @@
 .js-header.active {
   transition: all 0.3s linear;
   position: fixed;
+  z-index: 99;
   top: 0;
   width: 100%;
   background-color: rgba(#fff, 0.9) !important;
@@ -67,24 +77,67 @@
 }
 // contact cta
 .navbar__cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   @media #{$md} {
     flex: auto;
   }
-  @media #{$xs} {
-    display: none;
-  }
-  @media #{$sm} {
-    a {
-      font-size: 10px;
-      padding: 4px;
+  a {
+    @media #{$sm} {
+      padding: 8px 10px;
     }
   }
-  @media #{$xs} {
-    // display: none;
-    order: 3;
-    justify-self: center;
-    width: 100%;
-    text-align: center;
+  span {
+    @media #{$sm} {
+      display: none;
+    }
+  }
+}
+// contact info
+.navbar__inf {
+  .btn {
+    display: none;
+    @media #{$md} {
+      display: block;
+    }
+    @media #{$sm} {
+      padding: 8px 10px;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    gap: 20px;
+    @media #{$md} {
+      display: none;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        font-size: 14px;
+      }
+      .inf__cont {
+        span {
+          display: block;
+          &:nth-child(2) {
+            font-weight: 900;
+            color: $black;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: $black;
+          &:hover {
+            color: $main2;
+          }
+        }
+      }
+    }
   }
 }
 
