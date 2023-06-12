@@ -393,12 +393,8 @@
   text-align: center;
   padding: 40px 0 60px 0;
   background-color: #edf7fc;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(237, 247, 252, 0.88)), to(rgba(237, 247, 252, 0.88))),
-    url("https://uploads-ssl.webflow.com/63c15cb2eb6e2bca8b28a669/63c15cb2eb6e2bed8928a6cb_hero-image.png");
-  background-image: linear-gradient(180deg, rgba(237, 247, 252, 0.88), rgba(237, 247, 252, 0.88)),
-    url("https://uploads-ssl.webflow.com/63c15cb2eb6e2bca8b28a669/63c15cb2eb6e2bed8928a6cb_hero-image.png");
-  background-position: 0px 0px, 50% 50%;
-  background-size: auto, cover;
+  background-image: url(../img/bg-2.png);
+  background-position: right;
   opacity: 1;
   background-clip: border-box;
   -webkit-text-fill-color: inherit;
