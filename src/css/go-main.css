@@ -500,6 +500,14 @@ body.active {
     padding: 8px 10px;
   }
 }
+.navbar__cta span {
+  text-align: right;
+  /* opacity: 0.5; */
+  color: #747474;
+  font-size: 12px;
+  font-weight: 300;
+  margin-right: 10px;
+}
 @media only screen and (max-width: 768px) {
   .navbar__cta span {
     display: none;
