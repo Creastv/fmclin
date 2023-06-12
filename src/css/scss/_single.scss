@@ -294,22 +294,22 @@
       font-size: 12px;
     }
   }
-  .last {
-    color: $black;
-    font-size: 16px;
-    display: inline-block;
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-overflow: "----";
-    @media #{$xs} {
-      font-size: 14px;
-    }
-    @media #{$x} {
-      font-size: 12px;
-    }
-  }
+  // .last {
+  //   color: $black;
+  //   font-size: 16px;
+  //   display: inline-block;
+  //   width: 150px;
+  //   white-space: nowrap;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   text-overflow: "----";
+  //   @media #{$xs} {
+  //     font-size: 14px;
+  //   }
+  //   @media #{$x} {
+  //     font-size: 12px;
+  //   }
+  // }
 }
 // pagination
 .go-pagination {
