@@ -1405,7 +1405,7 @@ select {
   min-height: 50px;
   padding: 20px 10px;
   border-radius: 6px;
-  border: 1px solid #eeeef0;
+  border: 1px solid #e0e0e0;
   border-bottom: 1px solid #1167b1;
   font-size: 12px;
   outline: 0 !important;
@@ -1533,7 +1533,7 @@ select:focus {
 }
 
 .form__wraper {
-  background-color: #eeeef0;
+  background-color: #edf7fc;
   padding: 50px 50px 30px 50px;
   margin: 0 auto;
 }
@@ -1541,6 +1541,13 @@ select:focus {
   .form__wraper {
     padding: 20px 20px 20px 20px;
   }
+}
+
+.form__recepta {
+  margin-bottom: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .btn {
@@ -1596,7 +1603,7 @@ select {
   min-height: 50px;
   padding: 20px 10px;
   border-radius: 6px;
-  border: 1px solid #eeeef0;
+  border: 1px solid #e0e0e0;
   border-bottom: 1px solid #1167b1;
   font-size: 12px;
   outline: 0 !important;
@@ -1724,7 +1731,7 @@ select:focus {
 }
 
 .form__wraper {
-  background-color: #eeeef0;
+  background-color: #edf7fc;
   padding: 50px 50px 30px 50px;
   margin: 0 auto;
 }
@@ -1732,4 +1739,11 @@ select:focus {
   .form__wraper {
     padding: 20px 20px 20px 20px;
   }
+}
+
+.form__recepta {
+  margin-bottom: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
 }/*# sourceMappingURL=go-main.css.map */
