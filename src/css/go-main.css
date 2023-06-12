@@ -454,6 +454,19 @@ body.active {
     padding: 10px 0 !important;
   }
 }
+.js-header.active .js-navbar__toggler.active {
+  position: initial;
+  top: 0;
+  z-index: 100000000000000000000;
+  right: 0px;
+}
+
+.js-navbar__toggler.active {
+  position: absolute;
+  top: -46px;
+  z-index: 100000000000000000000;
+  right: 0px;
+}
 
 .navbar__brand img {
   margin-right: 10px;
@@ -634,10 +647,7 @@ body.active {
 }
 @media only screen and (max-width: 998px) {
   .sub-menu {
-    display: block !important;
-    position: relative;
-    background: none;
-    padding: 10px 0;
+    display: none !important;
   }
 }
 .sub-menu li a {
@@ -686,6 +696,11 @@ body.active {
 }
 .menu-item-has-children:hover .sub-menu {
   display: block !important;
+}
+@media only screen and (max-width: 998px) {
+  .menu-item-has-children:hover .sub-menu {
+    display: none !important;
+  }
 }
 
 .navbar__navigation.active {
@@ -890,6 +905,9 @@ body.active {
   font-size: 12px;
   line-height: 16px;
 }
+.posts-wraper--suggested .post-item .meta ul li {
+  margin: 0px;
+}
 .posts-wraper--suggested .post-item .meta ul li a {
   font-size: 12px;
   line-height: 16px;
@@ -1054,6 +1072,7 @@ body.active {
 .meta-group .meta * {
   font-size: 12px;
   color: #545454;
+  margin-bottom: 0px;
 }
 .meta-group .meta-pub {
   text-align: right;
@@ -1075,6 +1094,7 @@ body.active {
   padding: 5px;
   color: #545454;
   text-decoration: none;
+  margin: 0px;
 }
 .meta-group .meta-category ul li a:hover {
   color: #1167b1;

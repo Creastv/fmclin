@@ -3,7 +3,7 @@ $displayTitle = get_field( 'display_title' );
 $tytul = get_field( 'tytul_podstrony' );
 $podtytul = get_field( 'podtytul_podstrony' );
 ?>
-<?php  if($displayTitle || is_category() || is_author() || is_tag() || is_day() || is_month() || is_year() || is_tax()  ) { ?>
+<?php  if($displayTitle  ) { ?>
 <header class="entry-header">
     <h1 class="entry-title">
         <?php if($tytul) { ?>

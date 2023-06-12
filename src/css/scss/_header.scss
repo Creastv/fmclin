@@ -57,8 +57,19 @@
       padding: 10px 0 !important;
     }
   }
+  .js-navbar__toggler.active {
+    position: initial;
+    top: 0;
+    z-index: 99999999999999999999;
+    right: 0px;
+  }
 }
-
+.js-navbar__toggler.active {
+  position: absolute;
+  top: -46px;
+  z-index: 99999999999999999999;
+  right: 0px;
+}
 // Logo
 .navbar__brand {
   img {
@@ -219,10 +230,11 @@
   background-color: #fff;
   min-width: 200px;
   @media #{$md} {
-    display: block !important;
-    position: relative;
-    background: none;
-    padding: 10px 0;
+    // display: block !important;
+    // position: relative;
+    // background: none;
+    // padding: 10px 0;
+    display: none !important;
   }
   li {
     a {
@@ -268,6 +280,9 @@
   &:hover {
     .sub-menu {
       display: block !important;
+      @media #{$md} {
+        display: none !important;
+      }
     }
   }
 }
