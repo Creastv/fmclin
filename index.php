@@ -39,7 +39,9 @@ get_header(); ?>
 			endif; ?>
         <?php } ?>
     </h1>
+    <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
     <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+
 </header>
 <?php get_template_part( 'templates-parts/header/header', 'title' );  ?>
 <div class="posts-wraper">

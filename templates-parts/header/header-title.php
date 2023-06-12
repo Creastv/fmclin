@@ -42,6 +42,7 @@ $podtytul = get_field( 'podtytul_podstrony' );
 			endif; ?>
         <?php } ?>
     </h1>
+	<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
     <?php if($podtytul) { ?>
     <p class="subhead"> <?php echo $podtytul; ?></p>
     <?php } ?>
