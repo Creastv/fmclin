@@ -136,6 +136,40 @@ function register_acf_block_types() {
           wp_enqueue_style( 'go-inf',  get_template_directory_uri() . '/blocks/inf/inf.min.css' );
       },
     ));
+
+    acf_register_block_type(array(
+      'name'              => 'steps',
+      'title'             => __('Steps'),
+      'render_template'   => 'blocks/steps/steps.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'steps' ),
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-steps',  get_template_directory_uri() . '/blocks/steps/steps.min.css' );
+      },
+    ));
+      acf_register_block_type(array(
+        'name'              => 'posts',
+        'title'             => __('Ostatnio dodane posty'),
+        'render_template'   => 'blocks/recent-posts/recent-posts.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#575289',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'recent-posts' ),
+      'supports' => array( 'align' =>false ),
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-recent-posts',  get_template_directory_uri() . '/blocks/recent-posts/recent-posts.min.css' );
+      },
+    ));
 }
 if( function_exists('acf_register_block_type') ) {
     add_action('acf/init', 'register_acf_block_types');

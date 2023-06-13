@@ -26,6 +26,11 @@
   height: 100%;
   background-color: #edf7fc;
   padding: 20px;
+  border-radius: 6px;
+  transition: all 0.1s;
+}
+.uslugi-list ul li .item-wraper:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
 }
 .uslugi-list ul li .item-wraper a {
   text-decoration: none;
@@ -49,4 +54,18 @@
 }
 .uslugi-list ul li .item-wraper .c:hover {
   border-bottom: 2px solid #1167b1;
+}
+.uslugi-list ul li .item-wraper--flex {
+  padding: 0px;
+}
+.uslugi-list ul li .item-wraper--flex a {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.uslugi-list ul li .item-wraper--flex a h2 {
+  flex: auto;
+  margin-bottom: 0px;
+  margin-right: 10px;
 }/*# sourceMappingURL=uslugi.css.map */

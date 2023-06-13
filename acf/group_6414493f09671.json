@@ -19,6 +19,31 @@
             "message": "Usługi zaciągane są dynamicznie z zakładki Usługi i wyświetlane są w kolejności alfabetycznej.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_64885a34b9c6d",
+            "label": "Styl",
+            "name": "styl",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Pokaż więcej",
+                "2": "Pokaż mniej"
+            },
+            "default_value": "1 : Pokaż więcej",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -39,5 +64,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679051140
+    "modified": 1686657674
 }

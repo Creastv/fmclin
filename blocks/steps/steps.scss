@@ -1,0 +1,50 @@
+@import "../../src/css/scss/variable";
+
+.steps {
+  //   padding: 0px 50px;
+  width: 100%;
+  margin: auto;
+  max-width: 1100px;
+  .steps__wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @media #{$md} {
+      gap: 10px;
+    }
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+    .step {
+      width: 33.33%;
+      background-color: #fff;
+      padding: 100px 50px;
+      box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.05);
+      text-align: center;
+      @media #{$lg} {
+        padding: 50px 15px;
+      }
+      @media #{$sm} {
+        width: 100%;
+        padding: 15px;
+      }
+    }
+    .step--active {
+      width: 33.33%;
+      position: relative;
+      z-index: 3;
+      background-color: #edf7fc;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      @media #{$sm} {
+        width: 100%;
+        padding: 15px;
+      }
+    }
+    a {
+      margin: 20px 0;
+      display: inline-block;
+    }
+  }
+}

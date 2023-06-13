@@ -1,10 +1,10 @@
 .posts-wraper {
   display: flex;
   flex-wrap: wrap;
-  // gap: 20px;
+  gap: 20px;
   .post-item {
-    width: calc(33.333333%);
-    padding: 20px;
+    width: calc(33.333333% - 20px);
+    // padding: 20px;
     @media #{$md} {
       width: 100%;
     }
@@ -25,8 +25,8 @@
 }
 .posts-wraper--suggested {
   .post-item {
-    width: calc(33.333333%);
-    padding: 20px;
+    width: calc(33.333333% - 20px);
+    padding: 0px;
     @media #{$md} {
       width: 100%;
     }

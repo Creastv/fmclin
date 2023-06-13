@@ -25,6 +25,11 @@
         height: 100%;
         background-color: #edf7fc;
         padding: 20px;
+        border-radius: 6px;
+        transition: all 0.1s;
+        &:hover {
+          box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
+        }
         a {
           text-decoration: none;
           color: $black;
@@ -46,6 +51,20 @@
           border-bottom: 2px solid rgba(17, 103, 177, 0.22);
           &:hover {
             border-bottom: 2px solid $main;
+          }
+        }
+      }
+      .item-wraper--flex {
+        padding: 0px;
+        a {
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h2 {
+            flex: auto;
+            margin-bottom: 0px;
+            margin-right: 10px;
           }
         }
       }
