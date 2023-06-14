@@ -1,0 +1,27 @@
+@import "../../src/css/scss/variable";
+.b-lekarze {
+  // margin-bottom: 50px;
+  .lekarz {
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    .avatar {
+      margin-right: 10px;
+    }
+    .content {
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
+      h3 {
+        font-size: 18px;
+        margin: 0;
+      }
+      .span {
+        color: $main;
+      }
+    }
+  }
+}

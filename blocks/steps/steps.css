@@ -1,7 +1,6 @@
 .steps {
   width: 100%;
   margin: auto;
-  max-width: 1100px;
 }
 .steps .steps__wraper {
   display: flex;

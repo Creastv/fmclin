@@ -1,0 +1,27 @@
+@import "../../src/css/scss/variable";
+.b-opinions {
+  margin-bottom: 50px;
+  .opinion {
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .bottom {
+      p {
+        font-size: 14px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+  .swiper-pagination {
+    margin: 50px 0;
+  }
+}

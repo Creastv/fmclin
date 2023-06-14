@@ -3,11 +3,19 @@
   margin-left: -50vw;
   left: 50%;
   position: relative;
-  padding: 50px 0;
-  margin-bottom: 50px;
 }
 @media only screen and (max-width: 768px) {
   .custom-con p br {
     display: none !important;
   }
+}
+.custom-con .custom-con__wraper {
+  position: relative;
+  z-index: 1;
+}
+.custom-con .bg {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  width: 100%;
 }/*# sourceMappingURL=container.css.map */

@@ -135,16 +135,18 @@ function ka_override_MCE_options($init)
   }
   add_filter('tiny_mce_before_init', 'ka_override_MCE_options');
 
-// Excerpt changing 3 dots
-  Function new_excerpt_more( $more ) {
-	return ' ... ';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
+// // Excerpt changing 3 dots
+//   Function new_excerpt_more( $more ) {
+// 	return ' ... ';
+// }
+// add_filter('excerpt_more', 'new_excerpt_more');
 
 function new_excerpt_length( $length ) {
-    return 10;
+    return 20;
 }
 add_filter( 'excerpt_length', 'new_excerpt_length', 999 );
+
+
 
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page(array(

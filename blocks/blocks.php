@@ -55,6 +55,52 @@ function register_acf_block_types() {
     ));
 
     acf_register_block_type(array(
+      'name'              => 'opinions',
+      'title'             => __('Opinie'),
+      'render_template'   => 'blocks/opinions/opinions.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'supports'		=> [
+          'customClassName'	=> true,
+        ],
+      'mode'            => 'preview', 
+      'keywords'          => array( 'opinions' ),
+      'enqueue_assets'    => function(){
+        wp_enqueue_style( 'go-swipeer_css', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css' );
+        wp_enqueue_script('go-swiper_js', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js',  array(), '20130456', true );
+        wp_enqueue_script('go-opinions_init',  get_template_directory_uri() . '/blocks/opinions/opinions.js',  array(), '20130456', true );
+          wp_enqueue_style( 'go-opinions',  get_template_directory_uri() . '/blocks/opinions/opinions.min.css' );
+      },
+    )); 
+
+    acf_register_block_type(array(
+      'name'              => 'lekarze',
+      'title'             => __('Lekarze slider'),
+      'render_template'   => 'blocks/lekarze/lekarze.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'supports'		=> [
+          'customClassName'	=> true,
+        ],
+      'mode'            => 'preview', 
+      'keywords'          => array( 'lekarze' ),
+      'enqueue_assets'    => function(){
+        wp_enqueue_style( 'go-swipeer_css', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css' );
+        wp_enqueue_script('go-swiper_js', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js',  array(), '20130456', true );
+        wp_enqueue_script('go-lekarze_init',  get_template_directory_uri() . '/blocks/lekarze/lekarze.js',  array(), '20130456', true );
+          wp_enqueue_style( 'go-lekarze',  get_template_directory_uri() . '/blocks/lekarze/lekarze.min.css' );
+      },
+    )); 
+
+    acf_register_block_type(array(
       'name'              => 'uslugi',
       'title'             => __('Usługi'),
       'render_template'   => 'blocks/uslugi/uslugi.php',
@@ -151,6 +197,23 @@ function register_acf_block_types() {
       'keywords'          => array( 'steps' ),
       'enqueue_assets'    => function(){
           wp_enqueue_style( 'go-steps',  get_template_directory_uri() . '/blocks/steps/steps.min.css' );
+      },
+    ));
+    acf_register_block_type(array(
+        'name'              => 'vote-bar',
+        'title'             => __('Vote - bar'),
+        'render_template'   => 'blocks/vote-bar/vote-bar.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#575289',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'Vote' ),
+      'supports' => array( 'align' =>false ),
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-vote-bar',  get_template_directory_uri() . '/blocks/vote-bar/vote-bar.min.css' );
       },
     ));
       acf_register_block_type(array(
