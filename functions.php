@@ -62,6 +62,14 @@ if ( function_exists('register_sidebar') ) {
 		'name'=>__( 'Sidebar usługi', 'go' ),	
     'id'=> 'sidebar_uslugi',
 	);
+   $sidebar7 = array(
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<p class="widgettitle">',
+		'after_title' => '</p>',        
+		'name'=>__( 'Sidebar sticky sidebar', 'go' ),	
+    'id'=> 'sidebar_sticky',
+	);
 	
 	register_sidebar($sidebar1);
 	register_sidebar($sidebar2);
@@ -69,6 +77,7 @@ if ( function_exists('register_sidebar') ) {
   register_sidebar($sidebar4);
   register_sidebar($sidebar5);
   register_sidebar($sidebar6);
+  register_sidebar($sidebar7);
 }
 require_once get_template_directory() . '/func/enqueue-styles.php';
 require_once get_template_directory() . '/func/enqueue-scripts.php';

@@ -76,6 +76,42 @@ function register_acf_block_types() {
           wp_enqueue_style( 'go-opinions',  get_template_directory_uri() . '/blocks/opinions/opinions.min.css' );
       },
     )); 
+     acf_register_block_type(array(
+      'name'              => 'anchor',
+      'title'             => __('Anchor'),
+      'render_template'   => 'blocks/anchor/anchor.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'anchor' ),
+    ));
+    acf_register_block_type(array(
+        'name'              => 'sticky-sidebar',
+        'title'             => __('Sticky sidebar'),
+        'render_template'   => 'blocks/sticky-sidebar/sticky-sidebar.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#575289',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'sticky-sidebar' ),
+       'supports'		=> [
+          'align'			=> false,
+          'anchor'		=> false,
+          'customClassName'	=> false,
+          'jsx' 			=> true,
+        ],
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-sticky-sidebra',  get_template_directory_uri() . '/blocks/sticky-sidebar/sticky-sidebar.min.css' );
+          wp_enqueue_script('go-sticky-sidebra-js', get_template_directory_uri() . '/blocks/sticky-sidebar/sticky-sidebar.js', array( 'jquery' ),'4', true );
+      },
+    ));
 
     acf_register_block_type(array(
       'name'              => 'lekarze',
@@ -96,6 +132,26 @@ function register_acf_block_types() {
         wp_enqueue_style( 'go-swipeer_css', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css' );
         wp_enqueue_script('go-swiper_js', 'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js',  array(), '20130456', true );
         wp_enqueue_script('go-lekarze_init',  get_template_directory_uri() . '/blocks/lekarze/lekarze.js',  array(), '20130456', true );
+          wp_enqueue_style( 'go-lekarze',  get_template_directory_uri() . '/blocks/lekarze/lekarze.min.css' );
+      },
+    )); 
+
+    acf_register_block_type(array(
+      'name'              => 'lekarze_by_cat',
+      'title'             => __('Lekarze po kategori'),
+      'render_template'   => 'blocks/lekarze/lekarze-by-cat.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'supports'		=> [
+          'customClassName'	=> true,
+        ],
+      'mode'            => 'preview', 
+      'keywords'          => array( 'lekarze' ),
+      'enqueue_assets'    => function(){
           wp_enqueue_style( 'go-lekarze',  get_template_directory_uri() . '/blocks/lekarze/lekarze.min.css' );
       },
     )); 

@@ -275,6 +275,23 @@ body.active {
   padding-top: 50px;
 }
 
+.anchor {
+  height: 100px;
+  width: 100px;
+  margin-top: -150px;
+  position: absolute;
+  z-index: -1;
+}
+
+.scroll-anchor {
+  display: block;
+  /* width: 100%; */
+  /* height: 100px; */
+  background: red;
+  position: absolute;
+  margin-top: -100px;
+}
+
 .faq__wraper {
   display: flex;
   margin-bottom: 50px;

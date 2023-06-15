@@ -25,3 +25,32 @@
     }
   }
 }
+
+.lekarze-dropdown {
+  padding: 0;
+  list-style: none;
+  .lekarz {
+    border: 1px solid #edf7fc;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    .avatar {
+      margin-right: 10px;
+    }
+    .content {
+      h3 {
+        font-size: 18px;
+        margin: 0;
+      }
+      .span {
+        color: $main;
+      }
+    }
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}

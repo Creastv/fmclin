@@ -18,4 +18,31 @@
 }
 .b-lekarze .lekarz .content .span {
   color: #1167b1;
+}
+
+.lekarze-dropdown {
+  padding: 0;
+  list-style: none;
+}
+.lekarze-dropdown .lekarz {
+  border: 1px solid #edf7fc;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.lekarze-dropdown .lekarz .avatar {
+  margin-right: 10px;
+}
+.lekarze-dropdown .lekarz .content h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.lekarze-dropdown .lekarz .content .span {
+  color: #1167b1;
+}
+.lekarze-dropdown .lekarz p {
+  font-size: 14px;
+  margin: 0;
 }/*# sourceMappingURL=lekarze.css.map */

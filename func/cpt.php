@@ -61,3 +61,24 @@ function go_post_types_lekarze() {
 
 }
 add_action( 'init', 'go_post_types_lekarze' );
+
+
+add_action( 'init', 'go_taxonomy_lekarze', 0 );  
+function go_taxonomy_lekarze() {
+  $labels = array(
+    'name' => _x( 'Kat', 'go' ),
+    'singular_name' => _x( 'Kat', 'go' ),
+    'search_items' =>  __( 'Szukaj Typ' ),
+    'all_items' => __( 'Wszystkie Typy' ),
+    'menu_name' => __( 'Kat' ),
+  );    
+  register_taxonomy('Kat',array('lekarze'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'kat-lekarzy' ),
+  ));
+}
