@@ -17,7 +17,9 @@
   margin: 0;
 }
 .b-lekarze .lekarz .content .span {
+  display: block;
   color: #1167b1;
+  margin-bottom: 10px;
 }
 
 .lekarze-dropdown {
@@ -40,7 +42,9 @@
   margin: 0;
 }
 .lekarze-dropdown .lekarz .content .span {
+  display: block;
   color: #1167b1;
+  margin-bottom: 10px;
 }
 .lekarze-dropdown .lekarz p {
   font-size: 14px;
