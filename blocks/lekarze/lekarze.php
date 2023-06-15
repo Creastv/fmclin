@@ -18,9 +18,10 @@ if( $lekarze ):
             </svg> ';
             echo '</div>';
             echo ' <div class="content">';
+            echo '<a href="' . $permalink . ' ">';
               echo '<h3> ' . $title . ' </h3>';
+              echo '</a>';
               echo  $pos  ? '<span> ' . $pos . ' </span>' : false;
-              echo '<span class="position"></span>';
               echo the_excerpt(10);
             echo '</div>';
             echo '</div>';

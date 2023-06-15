@@ -12,11 +12,18 @@
   font-size: 14px;
   margin: 0;
 }
+.b-lekarze .lekarz .content a {
+  text-decoration: none;
+  color: #03254c;
+}
+.b-lekarze .lekarz .content a:hover {
+  color: #1167b1;
+}
 .b-lekarze .lekarz .content h3 {
   font-size: 18px;
   margin: 0;
 }
-.b-lekarze .lekarz .content .span {
+.b-lekarze .lekarz .content span {
   display: block;
   color: #1167b1;
   margin-bottom: 10px;
@@ -41,7 +48,14 @@
   font-size: 18px;
   margin: 0;
 }
-.lekarze-dropdown .lekarz .content .span {
+.lekarze-dropdown .lekarz .content a {
+  text-decoration: none;
+  color: #03254c;
+}
+.lekarze-dropdown .lekarz .content a:hover {
+  color: #1167b1;
+}
+.lekarze-dropdown .lekarz .content span {
   display: block;
   color: #1167b1;
   margin-bottom: 10px;

@@ -15,11 +15,18 @@
         font-size: 14px;
         margin: 0;
       }
+      a {
+        text-decoration: none;
+        color: $black;
+        &:hover {
+          color: $main;
+        }
+      }
       h3 {
         font-size: 18px;
         margin: 0;
       }
-      .span {
+      span {
         display: block;
         color: $main;
         margin-bottom: 10px;
@@ -46,7 +53,14 @@
         font-size: 18px;
         margin: 0;
       }
-      .span {
+      a {
+        text-decoration: none;
+        color: $black;
+        &:hover {
+          color: $main;
+        }
+      }
+      span {
         display: block;
         color: $main;
         margin-bottom: 10px;
