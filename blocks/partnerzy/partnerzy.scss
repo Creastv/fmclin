@@ -1,0 +1,41 @@
+@import "../../src/css/scss/variable";
+.partnerzy {
+  .partnerzy__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    p {
+      width: 20%;
+      //   flex: auto;
+      font-size: 21px;
+      //   line-height: 45px;
+      font-weight: 700;
+      color: $black;
+      margin: 0;
+      padding: 0;
+      @media #{$sm} {
+        width: 100%;
+      }
+    }
+    ul {
+      width: 80%;
+      list-style: none;
+      padding: 0;
+      margin: 0px;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: space-between;
+      @media #{$sm} {
+        width: 100%;
+      }
+      li {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

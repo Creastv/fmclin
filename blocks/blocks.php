@@ -157,6 +157,26 @@ function register_acf_block_types() {
     )); 
 
     acf_register_block_type(array(
+      'name'              => 'partnerzy',
+      'title'             => __('Partnerzy'),
+      'render_template'   => 'blocks/partnerzy/partnerzy.php',
+      'category'          => 'formatting',
+      'icon' => array(
+        'background' => '#575289',
+        'foreground' => '#fff',
+        'src' => 'ellipsis',
+      ),
+      'supports'		=> [
+          'customClassName'	=> true,
+        ],
+      'mode'            => 'preview', 
+      'keywords'          => array( 'Partnerzy' ),
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-partnerzy',  get_template_directory_uri() . '/blocks/partnerzy/partnerzy.min.css' );
+      },
+    )); 
+
+    acf_register_block_type(array(
       'name'              => 'uslugi',
       'title'             => __('Usługi'),
       'render_template'   => 'blocks/uslugi/uslugi.php',
