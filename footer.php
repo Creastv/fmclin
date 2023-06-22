@@ -1,6 +1,7 @@
 </div>
 </div>
 </main>
+
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
     <div class="container">
         <div class="row">
@@ -14,6 +15,7 @@
         <path id="Icon_material-arrow-upward" data-name="Icon material-arrow-upward" d="M6,18l2.115,2.115,8.385-8.37V30h3V11.745l8.37,8.385L30,18,18,6Z" transform="translate(-6 -6)" />
     </svg>
 </span>
+ <?php get_template_part('templates-parts/extras/sticky-social'); ?>
 
 <?php wp_footer(); ?>
 </body>

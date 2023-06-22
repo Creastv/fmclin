@@ -1771,4 +1771,19 @@ select:focus {
   max-width: 900px;
   margin: 0 auto;
   width: 100%;
+}
+
+.sticky-social {
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.sticky-social .sticky-social_wraper ul {
+  list-style: none;
+  padding: 0px;
+}
+.sticky-social .sticky-social_wraper ul li a {
+  padding: 10px;
 }/*# sourceMappingURL=go-main.css.map */

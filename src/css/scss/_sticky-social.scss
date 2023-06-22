@@ -1,0 +1,18 @@
+.sticky-social {
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  .sticky-social_wraper {
+    ul {
+      list-style: none;
+      padding: 0px;
+      li {
+        a {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
