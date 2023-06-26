@@ -4,6 +4,7 @@
   border-radius: 6px;
   background-color: #fff;
   display: flex;
+  align-items: center;
 }
 .b-lekarze .lekarz .avatar {
   margin-right: 10px;
