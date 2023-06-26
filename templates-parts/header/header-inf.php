@@ -15,7 +15,7 @@
         </svg>
         <div class="inf__cont">
             <span>Godziny otwarcia:</span>
-            <span>pon - pt: 8:00 - 20:00</span>
+            <span>pon - pt: 8:00 - 20:00<br> sob.: 8:00 - 14:00</span>
         </div>
     </li>
     <li>
