@@ -41,6 +41,9 @@ $lekarze  = new WP_Query(
                 echo  $pos  ? '<span> ' . $pos . ' </span>' : false;
                 echo '<span class="position"></span>';
                   echo '<p>' . get_the_excerpt() . '</p>';
+                if( !empty( get_the_content())) : 
+                echo '<div class="btn-wraper" > <a href="' . $permalink . ' "> Czytaj więcej </a></div>' ;
+                endif;
                 echo '</div>';
                 echo '</div>';
                 echo '</li>';
