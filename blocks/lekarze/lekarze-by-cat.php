@@ -17,12 +17,12 @@ $lekarze  = new WP_Query(
 ?>
     <ul class="lekarze-dropdown">
                 <?php while ( $lekarze->have_posts() ) : $lekarze->the_post(); 
-                $permalink = get_permalink( $lekarz->ID );
-                $title = get_the_title( $lekarz->ID );
-                $pos = get_field( 'pozycja', $lekarz->ID );
+                $permalink = get_permalink( get_the_ID());
+                $title = get_the_title( get_the_ID());
+                $pos = get_field( 'pozycja', get_the_ID());
                 ?>
                 <?php  
-                   echo '<li>';
+                echo '<li>';
                 echo ' <div class="lekarz">';
                 echo ' <div class="avatar">';
                 echo '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="103" viewBox="0 0 100 103">
@@ -31,12 +31,16 @@ $lekarze  = new WP_Query(
                 </svg> ';
                 echo '</div>';
                 echo ' <div class="content">';
+                if( !empty( get_the_content())) : 
                 echo '<a href="' . $permalink . ' ">';
+                endif;
                 echo '<h3> ' . $title . ' </h3>';
+                 if(!empty( get_the_content())) : 
                 echo '</a>';
+                endif;
                 echo  $pos  ? '<span> ' . $pos . ' </span>' : false;
                 echo '<span class="position"></span>';
-                  echo '<p>' . get_the_excerpt($lekarz->ID) . '</p>';
+                  echo '<p>' . get_the_excerpt() . '</p>';
                 echo '</div>';
                 echo '</div>';
                 echo '</li>';
