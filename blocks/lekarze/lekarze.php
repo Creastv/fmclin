@@ -22,7 +22,7 @@ if( $lekarze ):
               echo '<h3> ' . $title . ' </h3>';
               echo '</a>';
               echo  $pos  ? '<span> ' . $pos . ' </span>' : false;
-              echo the_excerpt(10);
+              echo '<p>' . get_the_excerpt( $lekarz->ID ) . '</p>';
             echo '</div>';
             echo '</div>';
          echo '</div>';
