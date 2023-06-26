@@ -1,7 +1,7 @@
 var swiper = new Swiper(".opin", {
   slidesPerView: 1,
   spaceBetween: 30,
-  loop: true,
+  // loop: true,
   grabCursor: true,
   autoplay: {
     delay: 2500,

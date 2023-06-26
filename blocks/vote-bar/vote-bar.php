@@ -36,8 +36,8 @@ $bar = get_field( 'score_bar');
                         </span>
                     </div>
                 </div>
-
-                <div class="score-bar__item">
+                <?php if($bar['numer_three']) : ?>
+                 <div class="score-bar__item">
                     <div class="top">
                         <span class="num"><?php echo $bar['numer_three'];?></span>
                         <span class="desc"><?php echo $bar['opis_three'];?></span>
@@ -55,6 +55,7 @@ $bar = get_field( 'score_bar');
                         </span>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
