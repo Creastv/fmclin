@@ -2,7 +2,7 @@
     <div class="sticky-social_wraper">
         <ul>
             <li>
-                <a href="#">
+                <a href="https://www.facebook.com/FMClinicCentrumMedyczne" target="_blank" rel="nofalow">
                    <svg id="Group_2" data-name="Group 2" xmlns="http://www.w3.org/2000/svg" width="30.24" height="30.24" viewBox="0 0 30.24 30.24">
                     <path id="Path_1" data-name="Path 1" d="M114.411,223.066A15.12,15.12,0,1,0,96.928,238V227.437H93.088v-4.371h3.839v-3.331c0-3.789,2.257-5.883,5.711-5.883a23.258,23.258,0,0,1,3.385.3v3.721h-1.907a2.185,2.185,0,0,0-2.464,2.361v2.836h4.194l-.67,4.371h-3.523V238A15.124,15.124,0,0,0,114.411,223.066Z" transform="translate(-84.17 -207.946)" fill="#4676ed"/>
                     <path id="Path_2" data-name="Path 2" d="M136.071,247.9l.67-4.371h-4.194v-2.836a2.185,2.185,0,0,1,2.464-2.361h1.907v-3.721a23.259,23.259,0,0,0-3.385-.3c-3.454,0-5.711,2.093-5.711,5.883v3.331h-3.839V247.9h3.839v10.566a15.286,15.286,0,0,0,4.725,0V247.9Z" transform="translate(-115.066 -228.407)" fill="#fff"/>
@@ -10,7 +10,7 @@
                 </a>
             </li>
              <li>
-                <a href="#">
+                <a href="https://www.instagram.com/przychodniafmclinic/" target="_blank" rel="nofalow">
                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
                     <defs>
                         <clipPath id="clip-path">
