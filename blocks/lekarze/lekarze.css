@@ -9,6 +9,16 @@
 .b-lekarze .lekarz .avatar {
   margin-right: 10px;
 }
+.b-lekarze .lekarz .avatar--circle {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  display: block;
+  border-radius: 100%;
+}
+.b-lekarze .lekarz .content {
+  width: calc(100% - 100px);
+}
 .b-lekarze .lekarz .content p {
   font-size: 14px;
   margin: 0;
@@ -44,6 +54,16 @@
 }
 .lekarze-dropdown .lekarz .avatar {
   margin-right: 10px;
+}
+.lekarze-dropdown .lekarz .avatar--circle {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  display: block;
+  border-radius: 100%;
+}
+.lekarze-dropdown .lekarz .content {
+  width: calc(100% - 100px);
 }
 .lekarze-dropdown .lekarz .content h3 {
   color: #03254c;

@@ -1377,6 +1377,18 @@ body.active {
   margin-bottom: 100px;
 }
 
+.person-cricle {
+  display: block;
+  width: 95px;
+  height: 95px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.person-cricle img {
+  width: 95px;
+  height: 95px;
+}
+
 .btn {
   background-color: #1167b1;
   color: #fff;

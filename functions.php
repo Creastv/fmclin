@@ -2,6 +2,7 @@
 add_theme_support('post-thumbnails');
 add_image_size( 'icon', 35, 35, array( 'center', 'center' ) );
 add_image_size( 'post-item', 450, 300, array( 'center', 'center' ) );
+add_image_size( 'person', 100, 100, array( 'center', 'center' ) );
 
 if ( ! function_exists( 'go_register_nav_menu' ) ) {
     function go_register_nav_menu(){

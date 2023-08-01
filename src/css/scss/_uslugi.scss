@@ -150,3 +150,15 @@
     margin-bottom: 100px;
   }
 }
+
+.person-cricle {
+  display: block;
+  width: 95px;
+  height: 95px;
+  border-radius: 100%;
+  overflow: hidden;
+  img {
+    width: 95px;
+    height: 95px;
+  }
+}

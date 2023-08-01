@@ -12,7 +12,10 @@ $postID = get_the_ID();
                 <div class="col"></div>
                 <div class="col">
                     <?php if ( has_post_thumbnail() )  : ?>
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" width="75px" height="75px" alt="<?php the_title(); ?>">
+                    <div class="person-cricle">
+                        <?php echo the_post_thumbnail('person'); ?>
+                    <!-- <img src="<?php echo get_the_post_thumbnail_url('person'); ?>" width="95px" height="95px" alt="<?php the_title(); ?>"> -->
+                    </div>
                     <?php endif; ?>
                     <h1><?php the_title(); ?></h1>
                 </div>
@@ -30,7 +33,7 @@ $postID = get_the_ID();
                 <h4>Usługi</h4>
                 <ul>
                     <?php foreach( $posts as $post ) :
-                setup_postdata($post);?>
+                    setup_postdata($post);?>
                     <li class="<?php echo $postID === $post->ID ? 'active' : null; ?>">
                         <a href="<?php the_permalink(); ?>">
                         <?php if ( has_post_thumbnail() )  : ?>

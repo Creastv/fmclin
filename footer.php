@@ -18,6 +18,8 @@
  <?php get_template_part('templates-parts/extras/sticky-social'); ?>
 
 <?php wp_footer(); ?>
+
 </body>
 
 </html>
+
